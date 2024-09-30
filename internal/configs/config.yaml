@@ -2,4 +2,4 @@ service:
   port: ":9876"
 
 database:
-  dataSourceName: "root:superSecretPassword@tcp(localhost:3306)/fastcampus"
+  dataSourceName: "root:superSecretPassword@tcp(localhost:3306)/fastcampus?parseTime=true"
