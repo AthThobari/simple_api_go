@@ -7,7 +7,7 @@ import (
 )
 
 func (r *repository) GetUser(ctx context.Context, email, username string) (*memberships.UserModel, error) {
-	query := `SELECT id, email, password, created_at, updated_at, created_by, updated_by FROM users WHERE id = ? OR email = ?`
+	query := `SELECT id, email, password, created_at, updated_at, created_by, updated_by FROM users WHERE email = ? OR username = ?`
 	row := r.db.QueryRowContext(ctx, query, email, username)
 
 	var response memberships.UserModel

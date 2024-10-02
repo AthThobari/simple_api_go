@@ -11,8 +11,21 @@ type (
 )
 
 type (
+	LoginRequest struct {
+		Email string `json:"email"`
+		Password string `json:"password"`
+	}
+)
+
+type (
+	LoginResponse struct {
+		AccessToken string `json:"accessToken"`
+	}
+)
+
+type (
 	UserModel struct {
-		Id        int       `db:"id"`
+		Id        int64      `db:"id"`
 		Email     string    `db:"email"`
 		Password  string    `db:"password"`
 		CreatedAt time.Time `db:"created_at"`

@@ -3,6 +3,7 @@ package memberships
 import (
 	"context"
 
+	"github.com/AthThobari/simple_api_go/internal/configs"
 	"github.com/AthThobari/simple_api_go/internal/model/memberships"
 )
 
@@ -12,11 +13,13 @@ type membershipRepository interface {
 }
 
 type service struct {
+	cfg            *configs.Config
 	membershipRepo membershipRepository
 }
 
-func NewService(membershipRepo membershipRepository) *service {
+func NewService(cfg *configs.Config, membershipRepo membershipRepository) *service {
 	return &service{
+		cfg:            cfg,
 		membershipRepo: membershipRepo,
 	}
 }
