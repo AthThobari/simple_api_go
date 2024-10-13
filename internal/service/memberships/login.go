@@ -27,6 +27,7 @@ func (s *service) Login(ctx context.Context, req memberships.LoginRequest) (stri
 	err = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(req.Password))
 	if err != nil {
 		log.Print("Password comparison failed:", err)
+		return "", errors.New("email not exist")
 	} else {
 		log.Print("Password comparison succeeded!")
 	}

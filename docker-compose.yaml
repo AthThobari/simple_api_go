@@ -9,4 +9,4 @@ services:
        - MYSQL_ROOT_PASSWORD=superSecretPassword
        - MYSQL_DATABASE=fastcampus
      volumes:
-       - E:/Belajar_golang/kalkulator_suhu/proyek_2/fast_campus_mysql:/var/lib/mysql
+       - /home/aththobari/Documents/Belajar_Golang/db:/var/lib/mysql
