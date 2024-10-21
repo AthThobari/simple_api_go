@@ -3,4 +3,4 @@ service:
   secretJWT: "fastcampustest"
 
 database:
-  dataSourceName: "root:superSecretPassword@tcp(localhost:3306)/fastcampus2?parseTime=true"
+  dataSourceName: "root:superSecretPassword@tcp(localhost:3306)/fastcampus?parseTime=true"
